@@ -3,7 +3,7 @@ package api
 import (
 	"strings"
 
-	"github.com/Meonako/webui-api/sampler"
+	"github.com/colornoe/webui-api/sampler"
 )
 
 type Config struct {

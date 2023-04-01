@@ -5,7 +5,7 @@ Aim to be as easy to use as possible ***without*** performance in mind.
 
 ## Currently Support (And also roadmap)
 
-- [x] Auth Related ( **DIDNT TEST** | Please [open an issue](https://github.com/Meonako/webui-api/issues/new) if you have encounter any problem )
+- [x] Auth Related ( **DIDNT TEST** | Please [open an issue](https://github.com/colornoe/webui-api/issues/new) if you have encounter any problem )
 - [x] Txt2Img
 - [x] Img2Img
 - [x] Extras (Single)
@@ -23,13 +23,13 @@ Aim to be as easy to use as possible ***without*** performance in mind.
 ***Required [Stable Diffusion Web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) running with `--api` argument***
 
 ```
-go get github.com/Meonako/webui-api
+go get github.com/colornoe/webui-api
 ```
 Then Import
 ```go
 import (
     ...
-    "github.com/Meonako/webui-api"
+    "github.com/colornoe/webui-api"
 )
 ```
 
@@ -39,7 +39,7 @@ Simply add package to import like this
 ```go
 import (
     ...
-    "github.com/Meonako/webui-api"
+    "github.com/colornoe/webui-api"
 )
 ```
 
@@ -129,7 +129,7 @@ for index := range resp.Images {
 
 ## Example
 
-Move [HERE](https://github.com/Meonako/webui-api/wiki/Example)
+Move [HERE](https://github.com/colornoe/webui-api/wiki/Example)
 
 ## Default Value
 ```go

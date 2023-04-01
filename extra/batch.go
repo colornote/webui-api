@@ -1,8 +1,8 @@
 package extra
 
 import (
-	"github.com/Meonako/webui-api"
-	"github.com/Meonako/webui-api/utils"
+	"github.com/colornoe/webui-api"
+	"github.com/colornoe/webui-api/utils"
 )
 
 // Convenience function to build []ImageData from base64-encoded image
