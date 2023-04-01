@@ -10,7 +10,7 @@ import (
 //
 //   - NOTE: the server will crash if the image has no generation parameters
 //
-//   - SEE: https://github.com/colornoe/webui-api/wiki#png-info-api-fix for how to fix
+//   - SEE: https://github.com/colornote/webui-api/wiki#png-info-api-fix for how to fix
 func (a *api) PNGInfo(image string) (string, error) {
 	payload, err := json.Marshal(map[string]string{"image": image})
 	if err != nil {

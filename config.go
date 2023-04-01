@@ -3,7 +3,7 @@ package api
 import (
 	"strings"
 
-	"github.com/colornoe/webui-api/sampler"
+	"github.com/colornote/webui-api/sampler"
 )
 
 type Config struct {

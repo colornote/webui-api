@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/colornoe/webui-api/utils"
+	"github.com/colornote/webui-api/utils"
 
 	"github.com/goccy/go-json"
 )

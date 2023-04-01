@@ -33,7 +33,7 @@ type Txt2Image struct {
 
 	// Hi-res fix option. Which Hi-res upscale model will be used.
 	//
-	//  See: `upscaler` helper package (github.com/colornoe/webui-api/upscaler)
+	//  See: `upscaler` helper package (github.com/colornote/webui-api/upscaler)
 	HRUpscaler string `json:"hr_upscaler,omitempty"`
 
 	// Hi-res fix option. After denoising and upscale, use this amount of steps instead of the amount before denoise and upscale.
