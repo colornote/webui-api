@@ -4,6 +4,20 @@ import (
 	"github.com/goccy/go-json"
 )
 
+type AlwaysonScripts struct {
+	Controlnet Controlnet `json:"controlnet"`
+}
+
+type Controlnet struct {
+	Args []Arg `json:"args"`
+}
+
+type Arg struct {
+	InputImage string  `json:"input_image"`
+	Model      string  `json:"model"`
+	Weight     float64 `json:"weight"`
+}
+
 type Txt2Image struct {
 	EnableHR          bool    `json:"enable_hr,omitempty"`          // Hi-res fix.
 	DenoisingStrength float64 `json:"denoising_strength,omitempty"` // Hi-res fix option. Determines how little respect the algorithm should have for image's content. At 0, nothing will change, and at 1 you'll get an unrelated image.
@@ -76,6 +90,8 @@ type Txt2Image struct {
 	SendImages bool `json:"send_images"`
 
 	SaveImages bool `json:"save_iamges,omitempty"`
+
+	AlwaysonScripts AlwaysonScripts `json:"alwayson_scripts,omitempty"`
 }
 
 func (data *Txt2Image) processDefault(a *api) {
