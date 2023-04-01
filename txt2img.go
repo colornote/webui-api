@@ -5,17 +5,17 @@ import (
 )
 
 type AlwaysonScripts struct {
-	Controlnet Controlnet `json:"controlnet"`
+	Controlnet Controlnet `json:"controlnet,omitempty"`
 }
 
 type Controlnet struct {
-	Args []Arg `json:"args"`
+	Args []Arg `json:"args,omitempty"`
 }
 
 type Arg struct {
 	InputImage string  `json:"input_image"`
 	Model      string  `json:"model"`
-	Weight     float64 `json:"weight"`
+	Weight     float64 `json:"weight,omitempty"`
 }
 
 type Txt2Image struct {
@@ -130,8 +130,6 @@ func (a *api) Text2Image(params *Txt2Image) (*txt2ImageRespond, error) {
 
 	payload, err := json.Marshal(params)
 
-	// fmt.Println(string(payload))
-	// return &txt2ImageRespond{}, nil
 	if err != nil {
 		return &txt2ImageRespond{}, err
 	}
