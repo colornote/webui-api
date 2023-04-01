@@ -5,7 +5,7 @@ import (
 )
 
 type AlwaysonScripts struct {
-	Controlnet Controlnet `json:"controlnet,omitempty"`
+	Controlnet Controlnet `json:"controlnet"`
 }
 
 type Controlnet struct {
@@ -13,9 +13,14 @@ type Controlnet struct {
 }
 
 type Arg struct {
-	InputImage string  `json:"input_image"`
-	Model      string  `json:"model"`
-	Weight     float64 `json:"weight,omitempty"`
+	InputImage    string  `json:"input_image"`
+	Model         string  `json:"model"`
+	Module        string  `json:"module,omitempty"`
+	Weight        float64 `json:"weight,omitempty"`
+	Guessmode     bool    `json:"guessmode,omitempty"`
+	ResizeMode    string  `json:"resize_mode,omitempty"`
+	GuidanceStart float64 `json:"guidance_start,omitempty"`
+	GuidanceEnd   float64 `json:"guidance_end,omitempty"`
 }
 
 type Txt2Image struct {
@@ -91,7 +96,7 @@ type Txt2Image struct {
 
 	SaveImages bool `json:"save_iamges,omitempty"`
 
-	AlwaysonScripts AlwaysonScripts `json:"alwayson_scripts,omitempty"`
+	AlwaysonScripts AlwaysonScripts `json:"alwayson_scripts"`
 }
 
 func (data *Txt2Image) processDefault(a *api) {
@@ -129,6 +134,8 @@ func (a *api) Text2Image(params *Txt2Image) (*txt2ImageRespond, error) {
 	params.processDefault(a)
 
 	payload, err := json.Marshal(params)
+
+	// fmt.Println(string(payload))
 
 	if err != nil {
 		return &txt2ImageRespond{}, err
