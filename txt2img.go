@@ -129,6 +129,9 @@ func (a *api) Text2Image(params *Txt2Image) (*txt2ImageRespond, error) {
 	params.processDefault(a)
 
 	payload, err := json.Marshal(params)
+
+	// fmt.Println(string(payload))
+	// return &txt2ImageRespond{}, nil
 	if err != nil {
 		return &txt2ImageRespond{}, err
 	}
