@@ -1,4 +1,4 @@
-module github.com/Meonako/webui-api
+module github.com/colornote/webui-api
 
 go 1.19
 
